@@ -1,0 +1,467 @@
+#header {
+    #header-top {
+        padding: 24px 0;
+        border-bottom: 1px solid #f0f0f0;
+        .container {
+            @include flex($j-c: space-between);
+            .header-top-right {
+                .header-right-logo {
+                    img {
+                        width: 88px;
+                        height: 59px;
+                    }
+                }
+            }
+
+            .header-top-left {
+                .header-left-icons {
+                    @include flex();
+                    div {
+                        padding: 0 12.5px;
+                        svg {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #header-menu {
+        padding: 1px 0;
+        .container {
+            @include flex($j-c: space-between);
+            .menu {
+                padding: 13px 0;
+                ul {
+                    @include flex();
+                    li {
+                        a {
+                            padding: 10px 20px;
+                            transition: $transition;
+                            &:hover {
+                                color: #2bce56;
+                            }
+                        }
+                    }
+                    .active-menu {
+                        a {
+                            color: #2bce56;
+                            border-bottom: 3px solid #2bce56;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#landing {
+    background-image: url("../img/background-header.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    // height: 650px;
+    .landing-content {
+        @include flex($dir: column);
+        color: #fff;
+        padding: 80px 0;
+        z-index: 2 !important;
+        .landing-title {
+            span {
+                font-size: 35px;
+                font-family: "lalezar";
+            }
+        }
+        .landing-text {
+            margin: 15px 0;
+            span {
+                font-size: $font-size-md;
+            }
+        }
+        .landing-searchbar {
+            margin: 15px 0;
+            .searchbar {
+                position: relative;
+                #searchbar-input {
+                    width: 800px;
+                    padding: 15px 29px 13px 19px;
+                    border: 1px solid #dfdfdf;
+                    border-radius: 5px;
+                    &::placeholder {
+                        font-size: 14px;
+                        color: #686868;
+                    }
+                }
+                #searchbar-btn {
+                    position: absolute;
+                    width: 20px;
+                    height: 100%;
+                    left: 15px;
+                    padding: 15px 0px 13px 0;
+                    background: #fff;
+                    border: none;
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .landing-info {
+            @include flex($j-c: space-around);
+            width: 100%;
+            .landing-item {
+                text-align: center;
+                .landing-info-icon {
+                    img {
+                        width: 150px;
+                    }
+                }
+                .landing-info-text {
+                    span {
+                        font-family: "lalezar";
+                    }
+                }
+            }
+        }
+    }
+    .landing-overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1 !important;
+    }
+}
+
+#latest-courses {
+    .latset-courses-header {
+        @include flex($j-c: space-between);
+        padding: 20px 0;
+        .latset-courses-title {
+            position: relative;
+            span {
+                @include title($font-size: $font-size-xl);
+            }
+            @include titleBeforeAfter();
+        }
+        .latset-courses-viewall {
+            background-color: #2bce56;
+            padding: 5px 10px;
+            border-radius: 3px;
+            * {
+                color: #fff;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+#special {
+    .special-title {
+        position: relative;
+        span {
+            @include title($font-size: $font-size-xl);
+        }
+        @include titleBeforeAfter();
+    }
+    .special-boxes {
+        .special-box {
+            @include flex($j-c: flex-start);
+            box-shadow: $box-shadow;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 15px;
+            .special-box-right {
+                .special-box-icon {
+                    i {
+                        font-size: 65px;
+                        color: rgb(102, 102, 102);
+                    }
+                }
+            }
+            .special-box-left {
+                margin-right: 10px;
+                .special-box-title {
+                    span {
+                        @include title($font-size: $font-size-xl);
+                    }
+                }
+                .special-box-text {
+                    span {
+                        font-size: $font-size-md;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#popular {
+    .popular-title {
+        position: relative;
+        padding: 20px 0;
+        span {
+            @include title($font-size: $font-size-xl);
+        }
+        @include titleBeforeAfter();
+    }
+    .swiper {
+        padding: 25px 0;
+        .swiper-slide {
+            padding: 0 10px;
+        }
+        .swiper-pagination-bullet {
+            width: 11px;
+            height: 12px;
+            border-radius: 50%;
+            transition: $transition;
+        }
+        .swiper-pagination-bullet-active {
+            width: 25px;
+            height: 12px;
+            border-radius: 5px;
+            background-color: #2bce56;
+        }
+    }
+}
+
+#presell {
+    .presell-title {
+        position: relative;
+        padding: 20px 0;
+        span {
+            @include title($font-size: $font-size-xl);
+        }
+        @include titleBeforeAfter();
+    }
+    .swiper {
+        padding: 25px 0;
+        .swiper-slide {
+            padding: 0 10px;
+        }
+        .swiper-pagination-bullet {
+            width: 11px;
+            height: 12px;
+            border-radius: 50%;
+            transition: $transition;
+        }
+        .swiper-pagination-bullet-active {
+            width: 25px;
+            height: 12px;
+            border-radius: 5px;
+            background-color: #2bce56;
+        }
+    }
+}
+
+#articles {
+    .articles-header {
+        @include flex($j-c: space-between);
+        padding: 20px 0;
+        .articles-title {
+            position: relative;
+            span {
+                @include title($font-size: $font-size-xl);
+            }
+            @include titleBeforeAfter();
+        }
+        .articles-viewall {
+            background-color: #2bce56;
+            padding: 5px 10px;
+            border-radius: 3px;
+            * {
+                color: #fff;
+                font-size: 13px;
+            }
+        }
+    }
+    .articles-cards {
+        .articles-card {
+            box-shadow: $box-shadow;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            transition: $transition;
+            &:hover {
+                transform: translateY(-5px);
+            }
+            .articles-card-img {
+                img {
+                    width: 100% !important;
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+            .articles-card-content {
+                padding: 15px 10px;
+                .articles-card-title {
+                    font-size: $font-size-md;
+                }
+                .articles-card-text {
+                    margin: 15px 0;
+                    span {
+                        font-size:12px;
+                        color: #686868;
+                    }
+                }
+                .articles-card-btn {
+                    padding-top: 10px ;
+                    a {
+                        color: #2bce56;
+                        border: 2px solid #2bce56;
+                        border-radius: 5px;
+                        padding: 3px 10px;
+                        font-size: $font-size-sm;
+                        &:hover {
+                            background-color: #2bce56;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#widgets {
+    margin: 40px 0;
+    .widget {
+        background-color: #F0F2F7;
+        border-radius: 20px;
+        padding: 25px 20px;
+        position: relative;
+        .about-us {
+            .about-us-title {
+                span {
+                    @include title($font-size:$font-size-xl);
+                }
+            }
+            .about-us-text {
+                padding: 10px 0;
+                span {
+                    font-size: $font-size-sm;
+                    color: #686868;
+                }
+            }
+        }
+        .latest-content {
+            .latest-content-title {
+                span {
+                    @include title($font-size:$font-size-xl);
+                }
+            }
+            .latest-content-links {
+                padding: 10px 0;
+                .latest-content-link {
+                    padding: 5px 0;
+                    a {
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }
+        .quick-access {
+            .quick-access-title {
+                span {
+                    @include title($font-size:$font-size-xl);
+                }
+            }
+            .quick-access-links {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px 0;
+                .quick-access-link {
+                    // padding: 5px 0;
+                    a {
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer  {
+    background:url("../img/footer-pattern.png"),rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    .footer-text {
+        text-align: center;
+        span {
+            color: #2bce56;
+        }
+    }
+}
+
+.courses-card {
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    margin-bottom: 30px;
+    transition: $transition;
+    &:hover {
+        transform: translateY(-7px);
+    }
+    .course-img {
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 100% !important;
+        }
+    }
+    .course-name {
+        padding: 15px 10px;
+        a {
+            font-size: $font-size-md;
+            transition: $transition;
+            &:hover {
+                color: #1e83f0;
+            }
+        }
+    }
+    .course-teacher {
+        @include flex($j-c: flex-start);
+        padding: 5px 10px;
+        .course-teacher-icon {
+            i {
+                font-size: $font-size-md;
+                color: #6c757d;
+            }
+        }
+        .course-teacher-name {
+            margin-right: 3px;
+            a {
+                color: #6c757d;
+                font-size: $font-size-sm;
+            }
+        }
+    }
+    .course-footer {
+        @include flex($j-c: space-between);
+        background-color: #f6f7fa;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        .course-students {
+            @include flex();
+            .course-student-icon {
+                i {
+                    color: #6c757d;
+                    font-size: $font-size-md;
+                }
+            }
+            .course-student-count {
+                margin-right: 5px;
+                span {
+                    color: #6c757d;
+                    font-size: $font-size-md;
+                }
+            }
+        }
+        .course-price {
+            span {
+                font-size: $font-size-md;
+                font-weight: 500;
+            }
+        }
+    }
+}
