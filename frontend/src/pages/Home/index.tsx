@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs";
+import Articles from "./components/Articles";
 import Courses from "./components/Courses";
 import Landing from "./components/Landing";
 import Popular from "./components/Popular";
@@ -13,6 +14,7 @@ const HomePage = () => {
       <AboutUs />
       <Popular />
       <Presell />
+      <Articles />
     </>
   );
 };
