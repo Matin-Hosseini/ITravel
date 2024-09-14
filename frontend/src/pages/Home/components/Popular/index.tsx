@@ -3,14 +3,13 @@ import "./index.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import SectionHeader from "../../../../components/SectionHeader";
 
 const Popular = () => {
   return (
     <div className="popular">
       <div className="container">
-        <div className="popular__header">
-          <span className="popular__title title">محبوب ترین دوره ها</span>
-        </div>
+        <SectionHeader title="محبوب ترین دوره ها" />
 
         <div className="popular__slider">
           <Swiper

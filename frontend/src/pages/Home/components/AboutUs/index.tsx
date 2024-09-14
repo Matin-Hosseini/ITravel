@@ -1,3 +1,4 @@
+import SectionHeader from "../../../../components/SectionHeader";
 import "./index.css";
 
 const aboutUsInfo = [
@@ -51,14 +52,10 @@ const AboutUs = () => {
   return (
     <div className="about-us">
       <div className="container">
-        <div className="about-us__header">
-          <span className="about-us__title title">
-            ما چه کمکی بهتون میکنیم؟
-          </span>
-          <span className="about-us__subtitle">
-            از اونجایی که آکادمی آموزشی سبزلرن یک آکادمی خصوصی هست
-          </span>
-        </div>
+        <SectionHeader
+          title="ما چه کمکی بهتون میکنیم؟"
+          caption=" از اونجایی که آکادمی آموزشی سبزلرن یک آکادمی خصوصی هست"
+        />
 
         <div className="container">
           <div className="row">
